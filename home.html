@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="sidebar"></div>
+  <input type="checkbox" id="menuicon">
+      <label for="menuicon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+  <div class="left-side-bar">
+    <nav class="menu-bar">
+      <div class="sidebar_image_div"></div>
+      <img class="sidebar_image" src="https://i.ibb.co/3s5cF0b/image.webp">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">introduce</a></li>
+        <li>
+          <a href="#">product</a>
+          <ul>
+            <li><a href="#">web page</a></li>
+            <li><a href="#">python</a></li>
+            <li><a href="#">unity</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">minecraft</a>
+          <ul>
+            <li><a href="#">account</a></li>
+            <li>
+              <a href="#">mod</a>
+              <ul>
+                <li><a href="#">3차메뉴아이템</a></li>
+                <li><a href="#">3차메뉴아이템</a></li>
+                <li><a href="#">3차메뉴아이템</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">server</a>
+              <ul>
+                <li><a href="#">3차메뉴아이템</a></li>
+                <li><a href="#">3차메뉴아이템</a></li>
+                <li><a href="#">3차메뉴아이템</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <style>
+    .sidebar_image_div{width:100%;height:100%;display:flex;justify-content:center;align-items:center;background-color:azure}
+    .sidebar_image{width:90%;height:90%;border-radius:100%;border:10px solid rgb(200, 255, 255);}
+    ul,li{margin:0;padding:0;list-style:none;}a{text-decoration:none;color:inherit;}
+    .left-side-bar{position:fixed;top:0;left:-200px;height:100%;width:200px;background-color:#dfdfdf;transition:all .35s;z-index:0;}
+    .left-side-bar>.status-ico{text-align:right;}
+    .left-side-bar>.status-ico>span:last-child{display:none;}
+    .left-side-bar>.menu-bar ul{background-color:#dfdfdf;}
+    .left-side-bar>.menu-bar>ul ul{position:absolute;display:none;left:100%;top:0;}
+    .left-side-bar>.menu-bar ul ul ul{top:67%;left:100%;}
+    .left-side-bar>.menu-bar>ul>li{position:relative;}
+    .left-side-bar>.menu-bar ul>li>a{display:block;padding:10px;white-space:nowrap;}
+    .left-side-bar>.menu-bar ul>li>a:not(:only-child)::after{content:"[+]";}
+    .left-side-bar>.menu-bar ul>li:hover>a:not(:only-child)::after{content:"[-]";}
+    .left-side-bar>.menu-bar ul>li:hover>a{background-color:black;color:white;}
+    .left-side-bar>.menu-bar ul>li:hover>ul{display:block;}
+    input[id="menuicon"] {display:none;}
+    input[id="menuicon"] + label {display:block;width:45px;height:30px;left:10px;top:10px;position:fixed;transition:all .35s;cursor:pointer;}
+    input[id="menuicon"] + label span {display:block;position:absolute;width:100%;height:5px;border-radius:50px;background:rgb(255, 255, 255);transition:all .35s;}
+    input[id="menuicon"] + label span:nth-child(1) {top:0;}
+    input[id="menuicon"] + label span:nth-child(2) {top:50%;transform:translateY(-50%);}
+    input[id="menuicon"] + label span:nth-child(3) {bottom:0;}
+    input[id="menuicon"]:checked + label {z-index:1;left:200px;}
+    input[id="menuicon"]:checked + label span:nth-child(1) {top:50%;transform:translateY(-50%) rotate(45deg);}
+    input[id="menuicon"]:checked + label span:nth-child(2) {opacity:0;}
+    input[id="menuicon"]:checked + label span:nth-child(3) {bottom:50%;transform:translateY(50%) rotate(135deg);}
+    input[id="menuicon"]:checked + label + div {left:0;}
+    @media only screen and (max-width: 600px) {input[id="menuicon"]:checked + label {z-index:1;left:0;}}
+  </style>
+  <a href="#" class="logo">Logo</a>
+  <ul class="ul">
+    <li class="li"><a href="#">Home</a></li>
+    <li class="li"><a href="#">About</a></li>
+    <li class="li"><a href="#">Work</a></li>
+    <li class="li"><a href="#" onClick="alert('email: jake1104dkswjddn2@gmail.com')">Contact</a></li>
+  </ul>
+  </header>
+  <section>
+    <img src="https://i.ibb.co/HC9fkv0/stars.png" id="stars">
+    <img src="https://i.ibb.co/MSkJsgf/moon.png" id="moon">
+    <img src="https://i.ibb.co/Mc07RP0/mountains-behind.png" id="mountains_behind">
+    <h2 id="text">Moon Light</h2>
+    <a href="#sec" id="btn">Explore</a>
+    <img src="https://i.ibb.co/QPV5sXK/mountains-front.png" id="mountains_front">
+  </section>
+  <div class="sec" id="sec">
+    <h2>Parallax Scrolling Effects</h2>
+    <p>열락의 간에 스며들어 착목한는 않는 풍부하게 품에 이것이다. 그들을 하는 아니더면, 노래하며 인생의 내는 때문이다. 인간에 끓는 피가 피다. 목숨이 이상은 청춘이 이것이다. 모래뿐일 목숨을 노래하며 것이다. 우리 쓸쓸한 얼마나 과실이 그들에게 반짝이는 이상을 피에 있으랴? 얼음에 있는 곳이 얼마나 있으랴? 하여도 얼마나 용감하고 들어 주며, 길지 황금시대다. 생명을 살았으며, 아니한 되는 곳이 그들은 착목한는 황금시대다. 얼마나 그들은 간에 인생을 목숨이 사막이다.
+      <br><br>
+      굳세게 꽃이 천자만홍이 우리의 바로 이것이야말로 황금시대다. 부패를 같이 끓는 속잎나고, 천지는 그들은 교향악이다. 청춘이 아니한 소금이라 풀밭에 인생의 유소년에게서 같으며, 무한한 힘있다. 소담스러운 없는 구할 가는 불어 황금시대의 교향악이다. 희망의 피는 뭇 같이, 구할 피에 힘있다. 싹이 이 같으며, 그들은 보이는 그들의 뛰노는 것이다. 낙원을 그들에게 구하지 현저하게 만천하의 그러므로 것이다. 모래뿐일 청춘의 품었기 얼마나 황금시대의 그들에게 열매를 말이다. 바이며, 가치를 밥을 품으며, 귀는 오아이스도 아름답고 가는 듣는다. 놀이 없으면, 내는 그러므로 부패를 오직 하는 무엇을 그리하였는가? 끝에 그들은 수 몸이 산야에 노년에게서 청춘 우리의 끓는다.
+      <br><br>
+      보는 실로 우리의 굳세게 이상은 위하여서. 열락의 위하여, 꽃이 그들의 힘차게 아름다우냐? 없는 군영과 소금이라 생의 들어 실로 바로 오직 같은 철환하였는가? 방지하는 없으면 간에 부패뿐이다. 위하여 보이는 영락과 끝에 그들의 발휘하기 것이다.보라, 약동하다. 그들의 살 원질이 일월과 끓는 그리하였는가? 만천하의 오아이스도 예수는 찾아다녀도, 실현에 그리하였는가? 풍부하게 인생에 따뜻한 생명을 피고 원질이 아니다. 청춘의 하는 옷을 끓는다. 없으면 희망의 못할 있으랴? 길지 풍부하게 주며, 가치를 열락의 못할 청춘은 살았으며, 것이다.
+      <br><br>
+      tutorial by Online Tutorials <a href="https://www.youtube.com/watch?v=1wfeqDyMUx4" target="_blank">link</a></p>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('mountains_behind');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let mountains_front = document.getElementById('mountains_front');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll', function(){
+      let value = window.scrollY;
+      stars.style.left = value * 0.25 + 'px';
+      moon.style.top = value * 0.75 + 'px';
+      mountains_behind.style.top = value * 0.5 + 'px';
+      mountains_front.style.top = value * 0 + 'px';
+      text.style.marginRight = value * 4 + 'px';
+      text.style.marginTop = value * 1.5 + 'px';
+      btn.style.marginTop = value * 1.5 + 'px';
+      header.style.top = value + 'px';
+    })
+  </script>
+</body>
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+    *
+    {margin:0;padding: 0;box-sizing: border-box;font-family: 'Poppins', sans-serif;scroll-behavior: smooth;}
+    body{min-height: 100vh;overflow-x: hidden;background: linear-gradient(#2b1055, #7597de);}
+    body {overflow: auto;}
+    body::-webkit-scrollbar {width: 10px;}
+    body::-webkit-scrollbar-thumb {background-color: deepskyblue;}
+    body::-webkit-scrollbar-track {background-color: #140722;}
+    header{position: absolute;top: 0;left: 0;width: 100%;padding: 30px 100px;display: flex;justify-content: space-between;align-items: center;z-index: 4;}
+    header .logo{color: #ffffff;font-weight: 700;text-decoration: none;font-size: 2em;text-transform: uppercase;}
+    header .ul{display: flex;justify-content: center;align-items: center;color: #fff;}
+    header .ul .li{list-style: none;margin-left: 20px;}
+    header .ul .li a{text-decoration: none;padding: 6px 15px;color: #fff;border-radius: 20px;}
+    header .ul .li a:hover ,
+    header .ul .li a.active{background: #fff;color: #2b1055;}
+    section{position: relative;width: 100%;height: 100vh;padding: 100px;display: flex;justify-content: center;align-items: center;overflow: hidden;}
+    section::before{content: '';position: absolute;bottom: 0;width: 100%;height: 100px;background: linear-gradient(to top, #1c0522, transparent);z-index: 3;}
+    section img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;pointer-events: none;}
+    section img#moon{mix-blend-mode: screen;}
+    section img#mountains_front{z-index: 2;}
+    #text{position: absolute;right: -350px;color: #fff;white-space: notwrap;font-size: 7.5vw;z-index: 1;}
+    #btn{text-decoration: none;display: inline-block;padding: 8px 30px;border-radius: 40px;background: #fff;color: #2b1055;font-size: 1.5em;z-index: 1;transform: translateY(100px);}
+    .sec{position: relative;padding: 100px;background: #1c0522;}
+    .sec h2{font-size: 3.5em;margin-bottom: 10px;color: #fff;}
+    .sec p{font-size: 1.2em;color: #fff;}
+    .sec p a{color: #bbffff;text-decoration: none;}
+    @media (max-width: 910px) {
+      .sec h2 {font-size: 35px;}
+    }
+    @media (max-width: 645px) {
+      .sec h2 {font-size: 25px;}
+    }
+</style>
