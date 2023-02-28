@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="darkModeElse">
+    <input type="checkbox" id="popup">
+    <label for="popup" class="popupOpen"><ion-icon class="popupOpenIcon" name="settings-outline" id="darkModeContent"></ion-icon></label>
+    <div class="popupDiv">
+        <div class="popupDivDiv" id="darkModeElse">
+            <label class="popupLabel" id="darkModeContent">setting</label>
+            <label class="darkModeLabel" id="darkModeContent">dark mode</label>
+            <div class = 'darkModeSwitch'>
+                <label class="darkModeSwitchLabel">
+                    <input id = "darkModeSwitch" class = "darkModeButton" type = 'checkbox' onclick = "turnDarkMode();">
+                    <span class = 'darkModeSlider'>
+                    <ion-icon id="darkModeContent" name="sunny-outline" style="position: absolute; left: -50%; color: var(--dark);"></ion-icon>
+                    <ion-icon id="darkModeContent" name="moon-outline" style="position: absolute; right: -50%; color: var(--dark);"></ion-icon>
+                </label>
+            </div>
+            <label for="popup" class="popupClose">
+                <ion-icon class="popupCloseIcon" name="close"></ion-icon>
+            </label>
+            <span class="darkModeSwitch"></span>
+        </div>
+        <label for="popup" class="popupDivLabel"></label>
+    </div>
+
+    <style>
+        :root {--light: #d8dbe0; --dark: #28292c; --link: rgb(27, 129, 112); --link-hover: rgb(24, 94, 82); --uiLight: rgb(200, 200, 200); --uiDark: rgb(50, 50, 50); --elseButton: rgb(120, 120, 120);}
+        
+        body{background:var(--uiLight);}
+        input[id="popup"]{display: none;}
+        input[id="popup"] + .popupOpen{display:inline-block; padding:20px; position:absolute; align-items: center; right:5px; top:5px; color:var(--light);}
+        input[id="popup"] + .popupOpen > .popupOpenIcon{position:absolute; right:10px; top:10px; rotate:0deg; width:35px; height:35px; transition:all 0.5s; color:var(--dark);}
+        input[id="popup"] + .popupOpen > .popupOpenIcon:hover{position:absolute; right:5px; top:5px; rotate:90deg; width: 45px; height:45px;}
+        input[id="popup"] + .popupOpen + .popupDiv{position:fixed; top:0; left:0; width:100%; height:100%; z-index:100;}
+        input[id="popup"] + .popupOpen + .popupDiv > .popupDivDiv{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:350px; height:250px; background:var(--uiLight); z-index:2; border-radius:20px; flex-direction:column;}
+        input[id="popup"] + .popupOpen + .popupDiv > .popupDivDiv > .popupClose:hover + .popupCloseIcon{width:40px; height:40px;}
+        .popupCloseIcon {color: var(--elseButton); width:25px; height:25px; float: right; font-size: 28px; font-weight: bold; position:absolute; top:10px; right:10px; transition: all 0.5s;}
+        .popupCloseIcon:hover,
+        .popupCloseIcon:focus {color: rgb(255, 0, 0); text-decoration: none; cursor: pointer;}
+        input[id="popup"] + .popupOpen + .popupDiv > .popupDivLabel {position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.9); z-index:1;}
+        input[id*="popup"] + .popupOpen + .popupDiv{opacity:0; visibility:hidden; transition:all 0.25s;}
+        input[id*="popup"]:checked + .popupOpen + .popupDiv{opacity:0.5; visibility:visible;}
+
+        .popupLabel {width: 100px; position: absolute; font-size: 30px; text-align: center; color: var(--dark); font-weight: bold; left: 50%; top: 7.5%; margin: -17.09px -50px;}
+
+        .darkModeSwitch {width: 200px; position: absolute; left: 65%; top: 25%; margin: -10px -20px;}
+        .darkModeLabel {width: 100px; position: absolute; font-size: 20px; text-align: center; color: var(--dark); font-weight: bold; left: 35%; top: 25%; margin: -11.275px -50px;}
+        .darkModeSwitchLabel {position: absolute; width: 20%; height: 20px; background-color: var(--light); border-radius: 50px; cursor: pointer;}
+        .darkModeButton {position: absolute; display: none;}
+        .darkModeSlider {position: absolute; width: 100%; height: 100%; border-radius: 10px; transition: 0.3s;}
+        .darkModeButton:checked ~ .darkModeSlider {background-color: var(--dark);}
+        .darkModeSlider::before {content: ""; position: absolute; top: 2.5px; left: 3.5px; width: 15px; height: 15px; border-radius: 50%; box-shadow: inset 5px 0.2px 0px 0px var(--dark); background-color: var(--light); transition: 0.3s;}
+        .darkModeButton:checked ~ .darkModeSlider::before {transform: translateX(19px); background-color: var(--light); box-shadow: none;}
+    </style>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        let darkModeSwitch = document.getElementById('darkModeSwitch');
+        let isDarkMode = false;
+        const darkModeContent = document.querySelectorAll('#darkModeContent');
+        const darkModeElse = document.querySelectorAll('#darkModeElse');
+        
+        function turnDarkMode() {
+            isDarkMode = !isDarkMode;
+            darkModeContent.forEach((content) => {
+                content.style.color = isDarkMode ? "var(--light)" : "var(--dark)";
+            })
+            darkModeElse.forEach((content) => {
+                content.style.background = isDarkMode ? "var(--uiDark)" : "var(--uiLight)";
+            })
+        }
+    </script>
+</body>
+</html>
